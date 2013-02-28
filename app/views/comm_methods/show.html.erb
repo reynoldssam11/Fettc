@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Method type:</b>
+  <%= @comm_method.method_type %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @comm_method.address %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @comm_method.user_id %>
+</p>
+
+<p>
+  <b>Frequency:</b>
+  <%= @comm_method.frequency %>
+</p>
+
+
+<%= link_to 'Edit', edit_comm_method_path(@comm_method) %> |
+<%= link_to 'Back', comm_methods_path %>

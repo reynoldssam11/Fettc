@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @notification.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @notification.content %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @notification.category %>
+</p>
+
+<p>
+  <b>Post time:</b>
+  <%= @notification.post_time %>
+</p>
+
+<p>
+  <b>Is approved:</b>
+  <%= @notification.is_approved %>
+</p>
+
+
+<%= link_to 'Edit', edit_notification_path(@notification) %> |
+<%= link_to 'Back', notifications_path %>

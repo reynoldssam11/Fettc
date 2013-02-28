@@ -1,0 +1,31 @@
+<h1>Listing comm_methods</h1>
+
+<table>
+  <tr>
+    <th>Method type</th>
+    <th>Address</th>
+    <th>User</th>
+    <th>Frequency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @comm_methods.sort! {| a,b | a.method_type <=> b.method_type } %>
+
+<% @comm_methods.each do |comm_method| %>
+  <tr>
+    <td><%= comm_method.method_type %></td>
+    <td><%= comm_method.address %></td>
+    <td><%= comm_method.user_id %></td>
+    <td><%= comm_method.frequency %></td>
+    <td><%= link_to 'Show', comm_method %></td>
+    <td><%= link_to 'Edit', edit_comm_method_path(comm_method) %></td>
+    <td><%= link_to 'Destroy', comm_method, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Comm method', new_comm_method_path %>

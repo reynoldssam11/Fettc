@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  content: MyText
+  category: MyString
+  post_time: 2013-02-25 09:30:09
+  is_approved: false
+
+two:
+  title: MyString
+  content: MyText
+  category: MyString
+  post_time: 2013-02-25 09:30:09
+  is_approved: false

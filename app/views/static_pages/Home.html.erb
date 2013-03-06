@@ -1,3 +1,40 @@
-<h1>StaticPages#Home</h1>
-<p>Find me in app/views/static_pages/Home.html.erb</p>
-<p> I was edited online!</p>
+<div class="center hero-unit">
+  <h1>Welcome to the Sample App</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+
+
+  <%= link_to "Sign up now!", new_user_path, class: "btn btn-large btn-primary" %>
+<h3>Listing notifications</h3>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Category</th>
+    <th>Post time</th>
+    <th>Is approved</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notifications.sort! {| a,b | a.title <=> b.title} %>
+<% @notifications.each do |notification| %>
+  <tr>
+    <td><%= notification.title %></td>
+    <td><%= notification.content %></td>
+    <td><%= notification.category %></td>
+    <td><%= notification.post_time %></td>
+    <td><%= notification.is_approved %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+</div>
+

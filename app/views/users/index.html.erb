@@ -12,8 +12,7 @@
     <th></th>
   </tr>
 
-<% @users.sort! {| a,b | a.class_of <=> b.class_of }.reverse %>
-<% @users.sort! {| a,b | a.name <=> b.name } %>
+
 <% @users.each do |user| %>
 
   <tr>
